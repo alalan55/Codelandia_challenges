@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap");
+
+$max-width: 1000px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    padding: 0 1.1rem;
+    background: linear-gradient(to top left, #1a4855, #628e75);
+    header {
+        width: 100%;
+        height: 110px;
+        position: fixed;
+        padding: 0.3rem;
+
+        nav {
+            display: flex;
+            max-width: $max-width;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+
+            .logo {
+                width: 130px;
+                height: 70px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .medias {
+                display: flex;
+                margin-right: 5rem;
+
+                svg {
+                    width: 25px;
+                    cursor: pointer;
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+    }
+
+    main {
+        height: 100vh;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content__main {
+            max-width: $max-width;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 1 1 300px;
+            }
+
+            .lado-esquerdo {
+                .textos {
+                    max-width: 82%;
+                    .name {
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                    .title {
+                        font-size: 2rem;
+                        h1 {
+                            font-weight: 800;
+                            display: block;
+
+                            &:nth-child(2) {
+                                margin-top: -2rem;
+                            }
+                        }
+                    }
+                    .descricao {
+                        span {
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .btns {
+                    text-align: center;
+                    display: flex;
+                    margin-top: 2.5rem;
+
+                    .btn-now {
+                        background: #628e75;
+                        transform: skew(-20deg);
+                        padding: 0.2rem 2rem;
+
+                        .text-btn {
+                            transform: skew(20deg);
+                        }
+                    }
+                    .btn-trailer {
+                        border: 2px solid #628e75;
+                        transform: skew(-20deg);
+                        padding: 0.2rem 2rem;
+
+                        .text-btn {
+                            transform: skew(20deg);
+                        }
+                    }
+
+                    & > div {
+                        margin: 0 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .lado-direito {
+                align-items: center;
+
+                img {
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 907px) {
+    .container {
+        .title {
+            font-size: 1.5rem !important;
+            h1 {
+                &:nth-child(2) {
+                    margin-top: -1rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content__main {
+        flex-wrap: wrap-reverse;
+
+        .lado-direito {
+            align-items: center;
+
+            img {
+                width: 300px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .medias {
+        margin-right: 2rem !important;
+    }
+    .content__main {
+        flex-wrap: wrap-reverse;
+        margin-top: 100px !important;
+
+        .descricao {
+            span {
+                font-size: 0.8rem;
+            }
+        }
+
+        .btns {
+            .btn-trailer {
+                display: none !important;
+            }
+        }
+    }
+}

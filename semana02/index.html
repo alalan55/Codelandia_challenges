@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <title>Desafio 02</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- NAVBAR -->
+      <header>
+        <nav>
+          <div class="cupom">
+            <span>Ganhe R$10,00 de desconto no frete</span>
+          </div>
+          <div class="name">
+              <span>
+                  Jordan Shoes
+              </span>
+          </div>
+        </nav>
+      </header>
+
+      <!-- CAPA -->
+      <div class="capa">
+          <div class="texto-capa">
+              <div class="titulo">
+                  <h2>A melhor loja de Jordan</h2>
+              </div>
+              <div class="descricao__capa" id="typed-strings">
+                  <p>O tênis Jordan é fruto de uma velha e forte parceria entre a nike e o jogador Michael Jordan.</p>
+              </div>
+              <p id="typed"></p>
+          </div>
+      </div>
+
+      <!-- MAIN -->
+      <main>
+          <div class="textos__main">
+              <h2>Destaques</h2>
+              <p>Frete grátis de brinde é aqui, aproveite por tempo limitado.</p>
+          </div>
+
+          <div class="cards">
+              <figure class="card"><img src="./img/1.png" alt=""></figure>
+              <figure class="card"><img src="./img/2.png" alt=""></figure>
+              <figure class="card"><img src="./img/3.png" alt=""></figure>
+              <figure class="card"><img src="./img/4.png" alt=""></figure>
+              <figure class="card"><img src="./img/5.png" alt=""></figure>
+              <figure class="card"><img src="./img/6.png" alt=""></figure>
+              <figure class="card"><img src="./img/7.png" alt=""></figure>
+              <figure class="card"><img src="./img/8.png" alt=""></figure>
+          </div>
+      </main>
+      
+      <!-- FOOTEER -->
+      <footer>
+          <span>Todos os direitos reservados</span>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '50px',
+      duration: 2000,
+      reset: true
+    });
+
+    ScrollReveal().reveal('.card', {delay: 200})
+    ScrollReveal().reveal('.textos__main', {delay: 200})
+    ScrollReveal().reveal('.titulo', {delay: 200})
+   // ScrollReveal().reveal('.descricao__capa', {delay: 100})
+
+    const typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typedSpeed: 120
+    })
+
+    
+
+  </script>
+</html>

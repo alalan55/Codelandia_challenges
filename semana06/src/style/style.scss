@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:B612;
+    src: url("../fontes\ \(B612\)/B612-Regular.ttf");
+}
+@font-face {
+    font-family:B612-bold;
+    src: url("../fontes\ \(B612\)/B612-Bold.ttf");
+}
+body{
+    font-family: B612;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.60)90%), url('../image/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header{
+    color: white;
+    font-family: B612-bold;
+    height: auto;
+
+    .name{
+        font-size: 3rem;
+    }
+}
+
+main{
+    display: flex;
+    color: white;
+    height: 31vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    &>div{
+        margin: 0 10%;
+    }
+
+    .capa-serie{
+        height: 200px;
+        width: 250px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .descricao{
+        .texto-descricao{
+            span{
+                letter-spacing: .5px;
+            }
+        }
+
+        .status-serie{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .tempo-status{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .estrelas{
+            .fas{
+                color: #ffa800;
+            }
+        }
+        .estrelas:nth-last-child(){
+            // :nth-last-child(){
+                color: #8E8884;
+          //  }
+        }
+
+        .botoes{
+            button{
+                padding: 1rem;
+            }
+
+            .now{
+                border: none;
+                background: #0072d2;
+                color: white;
+            }
+        }
+    }
+
+}
