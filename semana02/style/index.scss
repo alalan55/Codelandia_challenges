@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;  
+}
+
+header{
+    nav{
+        
+        &>div{
+            padding: 1.3rem;
+            text-align: center;
+        }
+        .cupom{
+            background: black;
+            color: white;
+            span{
+                font-weight: 400;
+                font-size: 1rem;
+            }
+        }
+        .name{
+            span{
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.capa{
+    height: 55vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)100%), url(../img/wallpaper.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .texto-capa{
+        color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 7rem;
+
+        &>div{
+            width: 28rem;
+        }
+
+        .titulo{
+            padding: 1.5rem 0;
+            h2{
+                font-size: 2rem;
+            }
+        }
+        .descricao__capa{
+            line-height: 30px;
+
+            p{
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+main{
+    padding: 3rem;
+
+    .textos__main{
+        text-align: center;
+        margin-bottom: 3rem;
+        h2{
+            padding-bottom: 1rem;
+        }
+    }
+
+    .cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        figure{
+            background: #ebe9ea;
+            height: 18rem;
+            width: 18rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: .5rem;
+
+            img{
+               width: 100%;
+            }
+        }
+    }
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: .5rem;
+    text-align: center;
+}
+
+@media screen and (max-width:640px){
+    .texto-capa{
+        margin-left: 1rem !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    .capa{
+
+        .texto-capa{
+            margin-left: 0 !important;
+            padding-left: .3rem;
+
+            .titulo{
+                width: auto;
+                h2{
+                    font-size: 1.5rem !important;
+                }
+            }
+            .descricao__capa{
+                width: auto;
+                p{
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+
+    .cupom{
+        span{
+            font-size: .5rem !important;
+        }
+    }
+    .name{
+        span{
+            font-size: .5rem !important;
+        }
+    }
+
+    .texto-capa{
+        margin-left: 0;
+        .titulo{
+            h2{
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+    .cards{
+        figure{
+            width: 20rem !important;
+            height: 10rem !important;
+        }
+    }
+}

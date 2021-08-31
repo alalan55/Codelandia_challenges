@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: B612;
+  src: url("../fontes (B612)/B612-Regular.ttf");
+}
+
+@font-face {
+  font-family: B612-bold;
+  src: url("../fontes (B612)/B612-Bold.ttf");
+}
+
+body {
+  font-family: B612;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(90%, rgba(0, 0, 0, 0.6))), url("../image/fundo.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6) 90%), url("../image/fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  color: white;
+  font-family: B612-bold;
+  height: auto;
+}
+
+header .name {
+  font-size: 3rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  height: 31vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main > div {
+  margin: 0 10%;
+}
+
+main .capa-serie {
+  height: 200px;
+  width: 250px;
+}
+
+main .capa-serie img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .descricao .texto-descricao span {
+  letter-spacing: .5px;
+}
+
+main .descricao .status-serie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .descricao .status-serie .tempo-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .descricao .estrelas .fas {
+  color: #ffa800;
+}
+
+main .descricao .estrelas:nth-last-child() {
+  color: #8E8884;
+}
+
+main .descricao .botoes button {
+  padding: 1rem;
+}
+
+main .descricao .botoes .now {
+  border: none;
+  background: #0072d2;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

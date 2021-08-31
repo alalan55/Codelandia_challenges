@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header nav > div {
+  padding: 1.3rem;
+  text-align: center;
+}
+
+header nav .cupom {
+  background: black;
+  color: white;
+}
+
+header nav .cupom span {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+header nav .name span {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.capa {
+  height: 55vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/wallpaper.jpeg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(../img/wallpaper.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.capa .texto-capa {
+  color: white;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 7rem;
+}
+
+.capa .texto-capa > div {
+  width: 28rem;
+}
+
+.capa .texto-capa .titulo {
+  padding: 1.5rem 0;
+}
+
+.capa .texto-capa .titulo h2 {
+  font-size: 2rem;
+}
+
+.capa .texto-capa .descricao__capa {
+  line-height: 30px;
+}
+
+.capa .texto-capa .descricao__capa p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+main {
+  padding: 3rem;
+}
+
+main .textos__main {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+main .textos__main h2 {
+  padding-bottom: 1rem;
+}
+
+main .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .cards figure {
+  background: #ebe9ea;
+  height: 18rem;
+  width: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: .5rem;
+}
+
+main .cards figure img {
+  width: 100%;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: .5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  .texto-capa {
+    margin-left: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .capa .texto-capa {
+    margin-left: 0 !important;
+    padding-left: .3rem;
+  }
+  .capa .texto-capa .titulo {
+    width: auto;
+  }
+  .capa .texto-capa .titulo h2 {
+    font-size: 1.5rem !important;
+  }
+  .capa .texto-capa .descricao__capa {
+    width: auto;
+  }
+  .capa .texto-capa .descricao__capa p {
+    font-size: 1rem !important;
+  }
+  .cupom span {
+    font-size: .5rem !important;
+  }
+  .name span {
+    font-size: .5rem !important;
+  }
+  .texto-capa {
+    margin-left: 0;
+  }
+  .texto-capa .titulo h2 {
+    font-size: 1.5rem !important;
+  }
+  .cards figure {
+    width: 20rem !important;
+    height: 10rem !important;
+  }
+}
+/*# sourceMappingURL=index.css.map */
