@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$red-background: #ff4656;
+
+@font-face {
+    font-family: Druk;
+    src: url("../fonts/Druk Wide Bold.ttf");
+}
+
+body {
+    font-family: Druk;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+
+    .capa {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9) 100%), url("../img/fundo.jpg") no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    header {
+        height: 70px;
+        width: 100%;
+
+        nav {
+            height: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 0 0.5rem;
+
+            .logo {
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    main {
+        height: calc(100vh - 70px);
+        width: 100%;
+        //  border: 1px solid red;
+        display: flex;
+
+        & > div {
+            //    border: 1px solid white;
+            width: 100%;
+        }
+
+        .direito {
+            .conteudo-direito {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .texto-direito {
+                    color: transparent;
+                    // opacity: 0.5;
+
+                    span {
+                        -webkit-text-stroke-width: 1px; /* largura da borda */
+                        -webkit-text-stroke-color: #FFF; /* cor da borda */
+                        font-size: 3rem;
+                    }
+                }
+
+                .cards {
+                    display: flex;
+                    .card-agent {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 0.3rem;
+                        .image {
+                            position: relative;
+                            background: $red-background;
+                            border: 1px solid white;
+
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                border: 1px solid white;
+                                height: 100%;
+                                width: 100%;
+                                left: -10px;
+                                top: -10px;
+                                z-index: 1;
+                            }
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .name {
+                            margin-top: .5rem;
+                            span {
+                                color: $red-background;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .esquerdo {
+            overflow: hidden;
+            .caracter {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //     border: 1px solid yellow;
+                overflow: hidden;
+
+                img {
+                    width: 650px;
+                }
+            }
+        }
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 10rem;
+        max-width: 100px;
+        margin: 0 auto;
+        width: 100vw;
+    }
+}
